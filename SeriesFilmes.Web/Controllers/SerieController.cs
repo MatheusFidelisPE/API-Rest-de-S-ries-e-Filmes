@@ -12,8 +12,6 @@ namespace SeriesFilmes.Web.Controllers
         {
             this.repositorioSerie = repositorio;
         }     
-       
-
 
        [HttpGet("")]
         public IActionResult Lista()
@@ -29,5 +27,26 @@ namespace SeriesFilmes.Web.Controllers
             repositorioSerie.Insere(serie);
             return Created("",serie);
         }
+        [HttpGet("{id}")]
+        public IActionResult Consulta(int id)
+        {
+            return Ok(new SerieModel(repositorioSerie.Lista().Find(x => x.Id == id)));
+        }
+        [HttpPut("{id}")]
+        public IActionResult Atualiza(int id, [FromBody] SerieModel model)
+        {   
+            model.Id = id;
+            Serie serie = this.repositorioSerie.Lista().Find(x => x.Id == id);
+            this.repositorioSerie.Atualiza(id, model.ToSerie());
+
+            return NoContent();
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            this.repositorioSerie.Exclui(id);
+            return NoContent();
+        }
+    
     }
 }
