@@ -21,7 +21,7 @@ namespace SeriesFilmes.Web.Controllers
         [HttpPost("")]
         public IActionResult Insere([FromBody] SerieModel model)
         {   
-            model.Id = repositorioSerie.ProximoId();
+            model.setId(repositorioSerie.ProximoId());
             Serie serie = model.ToSerie();
             
             repositorioSerie.Insere(serie);
@@ -35,11 +35,9 @@ namespace SeriesFilmes.Web.Controllers
         [HttpPut("{id}")]
         public IActionResult Atualiza(int id, [FromBody] SerieModel model)
         {   
-            model.Id = id;
-            Serie serie = this.repositorioSerie.Lista().Find(x => x.Id == id);
+            model.setId(id);
             this.repositorioSerie.Atualiza(id, model.ToSerie());
-
-            return NoContent();
+            return Ok(model);
         }
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)

@@ -51,6 +51,18 @@ namespace SeriesFilmes.Classes
         {
             return this.Excluido;
         }
+        public List<Genero> getGeneros()
+        {
+            return this.Genero;
+        }
+        public decimal RetornarBilheteria()
+        {
+            return this.Bilheteria;
+        }
+        public decimal RetornaNotaOmelete()
+        {
+            return this.NotaOmelete;
+        }
         private string RetornarGeneros()
         {
             string retorno = "";

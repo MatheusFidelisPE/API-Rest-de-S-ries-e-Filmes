@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IRepositorio<Serie>, SerieRepositorio>();
+builder.Services.AddSingleton<IRepositorio<Filme>, FilmeRepositorio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

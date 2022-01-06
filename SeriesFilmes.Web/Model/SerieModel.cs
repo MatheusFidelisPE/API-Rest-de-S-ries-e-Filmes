@@ -5,7 +5,7 @@ namespace SeriesFilmes.Web.Model
 {
     public class SerieModel
     {
-        public int Id { get; set; }
+        private int Id { get; set; }
         public List<Genero> Genero { get; set; }
         public string Titulo { get; set; }
         public string Descricao { get; set; } 
@@ -34,6 +34,14 @@ namespace SeriesFilmes.Web.Model
                 descricao: this.Descricao,
                 ano: this.Ano
             );
+        }
+        public int getId()
+        {
+            return this.Id;
+        }
+        public void setId(int id)
+        {
+            this.Id = id;
         }
     }
 }
