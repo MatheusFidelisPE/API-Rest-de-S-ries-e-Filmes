@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SeriesFilmes.Console/1.0.0": {
+        "dependencies": {
+          "SeriesFilmes": "1.0.0"
+        },
+        "runtime": {
+          "SeriesFilmes.Console.dll": {}
+        }
+      },
+      "SeriesFilmes/1.0.0": {
+        "runtime": {
+          "SeriesFilmes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SeriesFilmes.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SeriesFilmes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

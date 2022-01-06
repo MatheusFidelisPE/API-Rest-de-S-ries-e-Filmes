@@ -1,0 +1,12 @@
+D:\CatalogFilmesSeries\SeriesFilmes\bin\Debug\net6.0\SeriesFilmes.deps.json
+D:\CatalogFilmesSeries\SeriesFilmes\bin\Debug\net6.0\SeriesFilmes.dll
+D:\CatalogFilmesSeries\SeriesFilmes\bin\Debug\net6.0\ref\SeriesFilmes.dll
+D:\CatalogFilmesSeries\SeriesFilmes\bin\Debug\net6.0\SeriesFilmes.pdb
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.csproj.AssemblyReference.cache
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.GeneratedMSBuildEditorConfig.editorconfig
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.AssemblyInfoInputs.cache
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.AssemblyInfo.cs
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.csproj.CoreCompileInputs.cache
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.dll
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\ref\SeriesFilmes.dll
+D:\CatalogFilmesSeries\SeriesFilmes\obj\Debug\net6.0\SeriesFilmes.pdb
