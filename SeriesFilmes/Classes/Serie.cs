@@ -53,11 +53,11 @@ namespace SeriesFilmes.Classes
         {
             return this.Ano;
         }
-        public string getGeneros()
+        public List<Genero> getGeneros()
         {
-            return this.RetornarGeneros();
+            return this.Genero;
         }
-        private string RetornarGeneros()
+        public string RetornarGeneros()
         {
             string retorno = "";
             
