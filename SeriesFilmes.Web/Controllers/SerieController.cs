@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SeriesFilmes.Classes;
+using SeriesFilmes.Enums;
 using SeriesFilmes.Interfaces;
 using SeriesFilmes.Web.Model;
 namespace SeriesFilmes.Web.Controllers
@@ -27,11 +28,35 @@ namespace SeriesFilmes.Web.Controllers
             repositorioSerie.Insere(serie);
             return Created("",serie);
         }
-        [HttpGet("{id}")]
+        [HttpGet("Serie/id/{id}")]
         public IActionResult Consulta(int id)
         {
             return Ok(new SerieModel(repositorioSerie.Lista().Find(x => x.Id == id)));
         }
+        [HttpGet("Serie/titulo/{titulo}")]
+        public IActionResult ConsultaTitulo(string titulo)
+        {
+            SerieModel serie = new SerieModel(repositorioSerie.Lista().Find(x => x.RetornaTitulo() == titulo));
+            return Ok(serie);
+        }
+        // [HttpGet("Serie/{genero}")]
+        // public IActionResult consultaGeneros(Genero genre)
+        // {
+        //     List<Serie> listagem = repositorioSerie.Lista();
+        //     List<SerieModel> listagemGeneroDesejado = new List<SerieModel>();
+        //     foreach (var serie in listagem)
+        //     {
+        //        foreach (var genero in serie.getGeneros())
+        //        {
+        //            if(genero == genre)
+        //            {
+        //                listagemGeneroDesejado.Add(new SerieModel(serie));
+        //            }
+        //        }
+        //     }
+            
+        //     return Ok(listagemGeneroDesejado);
+        // }
         [HttpPut("{id}")]
         public IActionResult Atualiza(int id, [FromBody] SerieModel model)
         {   

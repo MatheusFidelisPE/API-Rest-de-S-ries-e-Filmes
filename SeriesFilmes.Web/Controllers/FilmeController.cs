@@ -20,6 +20,11 @@ namespace SeriesFilmes.Web.Controllers
         {
             return Ok(repositorioFilmes.Lista().Select(x => new FilmeModel(x)));
         }
+        [HttpGet("{id}")]
+        public IActionResult Consulta(int id)
+        {
+           return  Ok(new FilmeModel(repositorioFilmes.RetornaPorId(id)));
+        }
         [HttpPost("")]
         public IActionResult Insere([FromBody]FilmeModel model)
         {   
@@ -40,6 +45,6 @@ namespace SeriesFilmes.Web.Controllers
             repositorioFilmes.Exclui(id);
             return NoContent();
         }
-    
+
     }
 }
